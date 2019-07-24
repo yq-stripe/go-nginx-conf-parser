@@ -164,7 +164,7 @@ ForLoop:
 			case '\\':
 				buf.WriteRune('\\')
 			default:
-				panic(fmt.Errorf("invalid quoted character: '\\%c'", r))
+                buf.WriteRune(r)
 			}
 			quoted = false
 			continue
